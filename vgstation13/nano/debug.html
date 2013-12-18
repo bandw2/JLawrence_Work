@@ -1,0 +1,43 @@
+
+	<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+	<head>
+		<link rel='stylesheet' type='text/css' href='shared.css'><link rel='stylesheet' type='text/css' href='icons.css'>
+	</head>
+	<body scroll=auto data-url-parameters='{"src":"[0x2100d634]"}' data-template-data='{"main":"air_alarm.tmpl"}' data-initial-data='{"air":{"pressure":101.44594573974609,"temperature":293.54476928710937,"temperature_c":20.399999618530273,"contents":{"oxygen":20,"nitrogen":78,"co2":0,"plasma":0,"other":0},"danger":{"pressure":0,"temperature":0,"oxygen":0,"nitrogen":0,"co2":0,"plasma":0,"other":0,"overall":0}},"sensors":{"oxygen":[16,19,135,140],"nitrogen":[-1,-1,-1,-1],"carbon_dioxide":[-1,-1,5,10],"plasma":[-1,-1,0.20000000298023224,0.5],"other":[-1,-1,0.5,1],"pressure":[81.05999755859375,91.192497253417969,111.45749664306641,121.59000396728516],"temperature":[247.14999389648437,273.14999389648437,313.14999389648437,339.14999389648438]},"locked":0,"rcon":2,"target_temp":20,"atmos_alarm":0,"modes":[{"name":"Filtering","desc":"Scrubs out contaminants"},{"name":"Replace Air","desc":"Siphons out air while replacing"},{"name":"Panic","desc":"Siphons air out of the room"},{"name":"Cycle","desc":"Siphons air before replacing"},{"name":"Fill","desc":"Shuts off scrubbers and opens vents"},{"name":"Off","desc":"Shuts off vents and scrubbers"}],"mode":1,"presets":[{"name":"Human","desc":"Checks for Oxygen and Nitrogen"},{"name":"Vox","desc":"Checks for Nitrogen only"},{"name":"Coldroom","desc":"For server rooms and freezers"}],"preset":1,"screen":1,"vents":[{"id_tag":"209","name":"Bridge Vent Pump #1","area":88,"tag":"209","device":"AVP","power":1,"direction":"release","checks":1,"internal":0,"external":101.32499694824219,"timestamp":4.5,"sigtype":"status"}],"scrubbers":[{"area":88,"tag":"203","device":"AScr","timestamp":4.5,"power":1,"scrubbing":1,"panic":0,"filter_co2":1,"filter_tox":0,"filter_n2o":0,"filter_o2":0,"sigtype":"status","id_tag":"203","name":"Bridge Air Scrubber #1"}],"ui":{"status":2,"user":{"name":"SHODAN"}}}'>
+		<script type='text/javascript'>
+			function receiveUpdateData(jsonString)
+			{
+				// We need both jQuery and NanoUpdate to be able to recieve data
+				if (typeof NanoUpdate != 'undefined' && typeof jQuery != 'undefined')
+				{
+					NanoUpdate.receiveUpdateData(jsonString);
+				}
+				else
+				{
+					alert('receiveUpdateData error: something is not defined!');
+					if (typeof NanoUpdate == 'undefined')
+					{
+						alert('NanoUpdate not defined!');
+					}
+					if (typeof jQuery == 'undefined')
+					{
+						alert('jQuery not defined!');
+					}
+				}
+				// At the moment any data received before those libraries are loaded will be lost
+			}
+		</script>
+		<div id='uiWrapper'>
+			<div id='uiTitleWrapper'><div id='uiStatusIcon' class='icon24 uiStatusGood'></div><div id='uiTitle'>Bridge Air Alarm</div><div id='uiTitleFluff'></div></div>
+			<div id='uiContent'>
+	
+	<div id='mainTemplate'></div>
+	
+				<script type='text/javascript' src='libraries.min.js'></script><script type='text/javascript' src='nano_update.js'></script><script type='text/javascript' src='nano_config.js'></script><script type='text/javascript' src='nano_base_helpers.js'></script>
+			</div>
+		</div>
+	</body>
+</html>
+	
